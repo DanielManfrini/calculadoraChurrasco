@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<Html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge;" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge;" />
+  <meta http-equiv="refresh" content="1800">
+  <meta name="author" content="Daniel Lopes Manfrini" />
+  <meta name="description" content="Site para calcular a quantidade de itens com base na quantidade de pessoas." />
+  <base target="_top" />
+  <title>Calculadora de churrasco</title>
+  <link href="./css/main.css" rel="stylesheet" type="text/css" />
+  <script src="./js/jquery-3.7.1.min.js"></script>
+</head>
+
+<noscript>
+  O java script deve estar habilitado para visualização desta página!
+</noscript>
+
+<body>
+  <div class="header-box">
+  </div>
+
+  <div class="box flex-row">
+    <div class="box-content flex-row">
+      <div class="flex-column">
+
+        <div class="content-fields flex-column">
+
+          <div class="field-homens flex-between">
+            <label for="input-homens">Homens</label>
+            <input type="number" class="input-homens" id="input-homens" name="input-homens">
+          </div>
+
+          <div class="field-muheres flex-between">
+            <label for="input-mulheres">Mulheres</label>
+            <input type="number" class="input-homens" id="input-mulheres" name="input-mulheres">
+          </div>
+
+          <div class="field-criancas flex-between">
+            <label for="input-criancas">Crianças</label>
+            <input type="number" class="input-homens" id="input-criancas" name="input-criancas">
+          </div>
+
+        </div>
+
+        <div class="content-btn flex-between">
+          <button class="btn-padrao" id="btn-calcular" disabled> Calcular </button>
+          <button class="btn-padrao" id="btn-limpar" disabled> Limpar </button>
+        </div>
+
+      </div>
+
+      <div class="flex-column">
+        <div class="content-fields flex-column">
+          <div class="field-resultado flex-column">
+            <label>Quantidade de itens a serem comprados.</label>
+            <div id="div-resultado"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="./js/main.js"></script>
+
+</Html>
