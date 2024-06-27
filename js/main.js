@@ -29,8 +29,9 @@ $(document).ready(function () {
   $('#btn-limpar').on('click', function () {
     limparInputs();
   });
-  $(".input-homens").on('change', function () {
+  $(".input-quantidade").on('change', function () {
     limparResultado();
+    validaInputs();
   })
 });
 
@@ -86,12 +87,36 @@ function formatarTexto(valor, unidade1, unidade2) {
 }
 
 function limparInputs() {
-  $('#input-homens').val('');
-  $('#input-mulheres').val('');
-  $('#input-criancas').val('');
+  $('#input-homens').val('0');
+  $('#input-mulheres').val('0');
+  $('#input-criancas').val('0');
   limparResultado();
 }
 
 function limparResultado() {
   $('#div-resultado').html('');
+}
+
+function validaInputs() {
+
+  let contador = 0
+  let inputInvalido = false;
+
+  $(".input-quantidade").each(function () {
+    contador = contador + parseInt($(this).val());
+    
+    if ($(this).val() == "" || $(this).val() < 0) {
+      inputInvalido = true;
+    }
+
+  });
+
+  console.log(inputInvalido, contador)
+
+  if (inputInvalido || contador <= 0) {
+    $('.btn-padrao').attr('disabled', true);
+  } else {
+    $('.btn-padrao').attr('disabled', false);
+  }
+
 }

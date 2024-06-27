@@ -5,6 +5,7 @@
   --cor-fundo-2: #202020;
   --cor-fundo-3: #6a6a6a;
   --cor-hover: #b1b1b1;
+  --cor-disabled: #b1b1b1;
   --cor-detalhe: #B72D11;
   --sombra: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -99,6 +100,11 @@ body {
 .btn-padrao:hover {
   background-color: var(--cor-hover);
   cursor: pointer;
+}
+
+.btn-padrao:disabled {
+  background-color: var(--cor-disabled);
+  cursor: not-allowed;
 }
 
 .field-resultado {
